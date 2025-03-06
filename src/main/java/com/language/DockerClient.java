@@ -1,15 +1,14 @@
 package com.language;
 
-import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.core.DockerClientBuilder;
 
 import java.io.IOException;
 
-public class Test {
+public class DockerClient {
 
     public static void main(String[] args) throws IOException {
 
-        DockerClient dockerClient = DockerClientBuilder.getInstance().build();
+        com.github.dockerjava.api.DockerClient dockerClient = DockerClientBuilder.getInstance().build();
         String containerId = "ee85a0a319c27a5745d3d5a461c587d8910847bd261e2fbe87ac0da85895149f"; // 替换为实际的容器 ID
 
         // 停止容器
